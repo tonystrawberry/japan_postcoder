@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   It is based on the data from the JapanPost website."
   spec.homepage = 'https://github.com/tonystrawberry/japan_postcoder'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.required_ruby_version = '>= 2.7.0'
 
   spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
 
