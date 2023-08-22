@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
+# Use SimpleCov to check test coverage
+require 'simplecov'
+SimpleCov.start
+
 require 'japan_postcoder'
+
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
