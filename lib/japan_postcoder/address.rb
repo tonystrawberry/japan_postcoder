@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-# Class for Japanese Address
-# Has attributes for postcode, prefecture, city, ward and district
+## Class for Japanese Address
+## Has attributes for postcode, prefecture, city, ward and district
 #
-class Address
+class JapanPostcoder::Address
   attr_accessor :postcode, :prefecture, :city, :ward, :district
 
   # Initialize the address with postcode, prefecture, city, ward and district
