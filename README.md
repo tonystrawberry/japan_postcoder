@@ -7,6 +7,9 @@
   🇯🇵 Japan Postcoder
 </h1>
 
+[![Tests](https://github.com/tonystrawberry/japan_postcoder/workflows/Ruby/badge.svg)](https://github.com/tonystrawberry/japan_postcoder/actions/workflows/main.yml)
+
+
 Japan Postcoder is a library that allows you to get the address of a location in Japan from its postcode.
 It will help you get the prefecture, city, ward and street name from a postcode.
 
