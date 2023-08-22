@@ -28,7 +28,7 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     name: RSpec - Ruby ${{ matrix.ruby }}
-        strategy:
+    strategy:
       matrix:
         ruby:
           - '2.7.0'
