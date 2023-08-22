@@ -10,7 +10,7 @@ on:
 jobs:
   rubocop:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
+    name: Rubocop - Ruby ${{ matrix.ruby }}
     strategy:
       matrix:
         ruby:
@@ -26,11 +26,20 @@ jobs:
     - name: Run Rubocop (format check)
       run: bundle exec rubocop --parallel
   coverage:
-    needs: [rubocop]
-    name: coverage
     runs-on: ubuntu-latest
+    name: RSpec - Ruby ${{ matrix.ruby }}
+        strategy:
+      matrix:
+        ruby:
+          - '2.7.0'
+
     steps:
     - uses: actions/checkout@v3
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
     - name: Run RSpec (test & coverage)
       uses: paambaati/codeclimate-action@v5.0.0
       env:
