@@ -14,7 +14,7 @@
 Japan Postcoder is a library that allows you to get the address of a location in Japan from its postcode.
 It will help you get the prefecture, city, ward and street name from a postcode.
 
-All the location data is provided by the [Japan Post](https://www.post.japanpost.jp/zipcode/download.html).
+All the location data is provided by the [Japan Post](https://www.post.japanpost.jp/zipcode/download.html)
 
 Rubygems link is here: https://rubygems.org/gems/japan_postcoder
 
@@ -72,3 +72,11 @@ Thank you and enjoy!
 # 📝 License
 
 This project is free to use under the terms of the MIT License.
+
+# 📝 Self-memo
+After updating the gem:
+- Update the version in `lib/japan_postcoder/version.rb`
+- Create a PR and merge it after it's been approved & tested
+- Run `gem build japan_postcoder.gemspec`
+- Run `gem push japan_postcoder-<version>.gem`
+- Run `gh release create <version>`
