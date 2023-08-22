@@ -12,6 +12,8 @@ It will help you get the prefecture, city, ward and street name from a postcode.
 
 All the location data is provided by the [Japan Post](https://www.post.japanpost.jp/zipcode/download.html).
 
+Rubygems link is here: https://rubygems.org/gems/japan_postcoder
+
 # 🏃🏻 Getting started
 
 Start by including `japan-postcoder` in your project:
