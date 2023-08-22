@@ -41,9 +41,23 @@ You can also use the `JapanPostcoder` class to get the address of a location in 
 require 'japan-postcoder'
 
 postcode = '2140037'
-address = JapanPostcoder.to_hash(postcode)
+address = JapanPostcoder.to_address_hash(postcode)
 
 puts address # => {:prefecture=>"神奈川県", :city=>"川崎市", :ward=>"多摩区", :district=>"菅仙谷町"}
+```
+
+## 🇬🇧 Romaji transcription
+
+You can use the `JapanPostcoder` class to get the address of a location in Japan in **romaji** format by using the `romaji` named argument.
+
+```ruby
+address = JapanPostcoder.to_address('2140037', romaji: true)
+puts address # => "KANAGAWA KEN KAWASAKI SHI TAMA KU SUGESEN YACHO"
+```
+
+```ruby
+address = JapanPostcoder.to_address_hash('2140037', romaji: true)
+puts address # => {:prefecture=>"KANAGAWA KEN", :city=>"KAWASAKI SHI", :ward=>"TAMA KU", :district=>"SUGESEN YACHO"}
 ```
 
 # 💪 Contributing
