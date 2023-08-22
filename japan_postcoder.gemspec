@@ -1,24 +1,25 @@
 # frozen_string_literal: true
 
-require_relative "lib/version"
+require_relative 'lib/version'
 
 Gem::Specification.new do |spec|
-  spec.name = "japan_postcoder"
+  spec.name = 'japan_postcoder'
   spec.version = JapanPostcoder::VERSION
-  spec.authors = ["Tony Duong"]
-  spec.email = ["tony.duong.102@gmail.com"]
+  spec.authors = ['Tony Duong']
+  spec.email = ['tony.duong.102@gmail.com']
 
-  spec.summary = "🏡 A Ruby gem for getting Japan address from postal code."
-  spec.description = "JapanPostcoder is a Ruby gem for getting Japan address from postal code. It is based on the data from the JapanPost website."
-  spec.homepage = "https://github.com/tonystrawberry/japan_postcoder"
-  spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.summary = '🏡 A Ruby gem for getting Japan address from postal code.'
+  spec.description = "JapanPostcoder is a Ruby gem for getting Japan address from postal code.
+  It is based on the data from the JapanPost website."
+  spec.homepage = 'https://github.com/tonystrawberry/japan_postcoder'
+  spec.license = 'MIT'
+  spec.required_ruby_version = '>= 2.6.0'
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/tonystrawberry/japan_postcoder."
-  spec.metadata["changelog_uri"] = "https://github.com/tonystrawberry/japan_postcoder/CHANGELOG.md"
+  spec.metadata['homepage_uri'] = spec.homepage
+  spec.metadata['source_code_uri'] = 'https://github.com/tonystrawberry/japan_postcoder.'
+  spec.metadata['changelog_uri'] = 'https://github.com/tonystrawberry/japan_postcoder/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -28,13 +29,14 @@ Gem::Specification.new do |spec|
         f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor Gemfile])
     end
   end
-  spec.bindir = "exe"
+  spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
