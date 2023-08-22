@@ -14,6 +14,8 @@ module JapanPostcoder
   # Returns the address in string format
   # Example: '神奈川県川崎市多摩区西生田'
   def self.to_address(postal_code, romaji: false)
+    postal_code = postal_code.to_s
+
     validate_postal_code!(postal_code)
 
     address = get_address(postal_code, romaji: romaji)
@@ -31,6 +33,8 @@ module JapanPostcoder
   #   district: '西生田'
   # }
   def self.to_address_hash(postal_code, romaji: false)
+    postal_code = postal_code.to_s
+
     validate_postal_code!(postal_code)
 
     address = get_address(postal_code, romaji: romaji)
