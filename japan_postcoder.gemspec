@@ -9,16 +9,17 @@ Gem::Specification.new do |spec|
   spec.email = ['tony.duong.102@gmail.com']
 
   spec.summary = '🏡 A Ruby gem for getting Japan address from postal code.'
-  spec.description = "JapanPostcoder is a Ruby gem for getting Japan address from postal code.
-  It is based on the data from the JapanPost website."
+  spec.description = "🇯🇵 JapanPostcoder is a Ruby gem for getting Japan address from postal code.
+  Information is based on the data from the JapanPost website: https://www.post.japanpost.jp/zipcode/download.html.
+  "
   spec.homepage = 'https://github.com/tonystrawberry/japan_postcoder'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.7.0'
 
-  spec.metadata['allowed_push_host'] = "https://rubygems.org"
+  spec.metadata['allowed_push_host'] = "https://rubygems.org/"
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/tonystrawberry/japan_postcoder.'
+  spec.metadata['source_code_uri'] = 'https://github.com/tonystrawberry/japan_postcoder'
   spec.metadata['changelog_uri'] = 'https://github.com/tonystrawberry/japan_postcoder/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.

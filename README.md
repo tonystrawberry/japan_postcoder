@@ -1,35 +1,54 @@
-# JapanPostcoder
+<p align="center">
+  <a>
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/004/587/562/small_2x/doodle-freehand-drawing-of-japan-map-free-vector.jpg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  🇯🇵 Japan Postcoder
+</h1>
 
-TODO: Delete this and the text below, and describe your gem
+Japan Postcoder is a library that allows you to get the address of a location in Japan from its postcode.
+It will help you get the prefecture, city, ward and street name from a postcode.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/japan_postcoder`. To experiment with that code, run `bin/console` for an interactive prompt.
+All the location data is provided by the [Japan Post](https://www.post.japanpost.jp/zipcode/download.html).
 
-## Installation
+# 🏃🏻 Getting started
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Start by including `japan-postcoder` in your project:
 
-Install the gem and add to the application's Gemfile by executing:
+```bash
+gem 'japan-postcoder'
+```
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+Then, you can use the `JapanPostcoder` class to get the address of a location in Japan from its postcode:
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+# 👨🏻‍💻 Usage
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+You can use the `JapanPostcoder` class to get the address of a location in Japan in **string** format.
+```ruby
+require 'japan-postcoder'
 
-## Usage
+postcode = '2140037'
+address = JapanPostcoder.to_address(postcode)
 
-TODO: Write usage instructions here
+puts address # => "神奈川県川崎市多摩区菅仙谷町"
+```
 
-## Development
+You can also use the `JapanPostcoder` class to get the address of a location in Japan in **hash** format.
+```ruby
+require 'japan-postcoder'
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+postcode = '2140037'
+address = JapanPostcoder.to_hash(postcode)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+puts address # => {:prefecture=>"神奈川県", :city=>"川崎市", :ward=>"多摩区", :district=>"菅仙谷町"}
+```
 
-## Contributing
+# 💪 Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/japan_postcoder.
+If you notice a bug or want to add a new feature, please open an issue or submit a pull request.
+Thank you and enjoy!
 
-## License
+# 📝 License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+This project is free to use under the terms of the MIT License.
