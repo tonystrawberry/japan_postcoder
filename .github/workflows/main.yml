@@ -26,6 +26,7 @@ jobs:
     - name: Run Rubocop (format check)
       run: bundle exec rubocop --parallel
   coverage:
+    needs: [rubocop]
     name: coverage
     runs-on: ubuntu-latest
     steps:
